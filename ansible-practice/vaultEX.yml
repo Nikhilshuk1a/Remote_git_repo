@@ -1,0 +1,10 @@
+---
+- name: Simple example of using Vault
+  hosts: my-machine2
+  remote_user: nikhil
+
+
+  tasks:
+  - name: printing the ansible-vault secret value from command line
+    debug:
+      var: my_secret_from_base64_pass_file

@@ -1,0 +1,43 @@
+---
+- name: Practicing Conditions in ansible
+  hosts: my-machine2
+  remote_user: nikhil
+
+  vars_files:
+    - myvar.yml
+
+  tasks:
+
+  - name: Printing variable from another file
+    debug:
+      var: var_from_myvar_file
+
+
+  - name: Installing Apache webserver using var in other file
+    apt:
+      name: apache2
+      state: absent
+    when: install_apache_flag
+
+  - name: Checking the OS and Version using using and operator
+    debug:
+      var: ansible_facts['kernel_version']
+    when: ansible_facts['os_family'] == "Debian" and ansible_facts['distribution_major_version'] | int >= 20
+
+  - name: Exteacting text from a file in remote server
+    command: cat /home/nikhil/greet.txt
+    register: text_from_remote_server
+
+  - name: using a variable in conditional statement
+    debug:
+      var: text_from_remote_server.stdout
+    when: text_from_remote_server.stdout.find('hi') != 1
+
+  - name: ex:-of using loops in ansible
+    command: echo {{ item }}
+    loop: [ 0, 2, 4, 6, 8, 10, 12 ]
+    when: item >= 2
+
+#  - name: Trying to print ansible facts 
+#    debug:
+#      var: ansible_facts

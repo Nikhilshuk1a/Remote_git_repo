@@ -1,0 +1,4 @@
+---
+var_from_myvar_file: "This is the variable value from Variable File "
+
+install_apache_flag: false

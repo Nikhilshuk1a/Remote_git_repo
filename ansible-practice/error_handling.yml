@@ -1,0 +1,32 @@
+---
+- name: Error handling tasks
+  hosts: my-machine2
+  remote_user: nikhil
+
+  tasks:
+    - name: Error handling using Ignore_error flag
+      template:
+        src: index.html
+        dest: /home/nikhil/
+      register: copy_result
+      ignore_errors: true
+
+    - name: string variable (i.e copy_result)
+      debug:
+        var: copy_result
+
+
+    - name: index.html copy with failed_when flag
+      template:
+        src: index.html
+        dest: /home/nikhil/
+      failed_when:
+        - '"Could not find or access" not in copy_result.msg'
+        - copy_result.failed == true
+      any_errors_fatal: false
+
+
+    - name: create a file if it does not exists
+      command: touch /home/nikhil/Error.txt
+      register: file_created
+      changed_when: file_created.rc == 0

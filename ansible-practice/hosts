@@ -1,0 +1,3 @@
+#localhost ansible_connection=local
+[my-machine2]
+192.168.0.5 ansible_user=nikhil ansible_ssh_private_key=/home/niks/.ssh/id_rsa

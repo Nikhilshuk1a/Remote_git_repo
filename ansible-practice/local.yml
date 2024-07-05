@@ -1,0 +1,76 @@
+---
+
+- name: Practicing Variables in localhost
+  hosts: localhost
+  connection: local
+
+  vars:
+    hello_world_playbook: "Hello world using String variable in ansible"
+    is_enabled: true
+
+# this is list
+#
+    fruits:
+      - Apple
+      - Banana
+      - Grapes
+      - Guava 
+      - cherry
+
+# this is dictionary
+#
+    fruit_prices:
+      Apple: 100
+      Banana: 40
+      Grapes: 120
+      Guava: 60
+      cherry: 150
+
+    fruit_basket:
+      - name: john
+        fruits:
+          - Apple
+          - Banana
+      - name: jems
+        fruits:
+          - Grapes
+          - cherry
+      - name: niks
+        fruits:
+          - Guava
+          - Apple
+
+  tasks:
+    - name: String variable
+      debug:
+        var: hello_world_playbook
+
+    - name: Boolean Variable
+      debug:
+        msg: "Variable is True"
+      when: is_enabled
+
+    - name: Variables as a List
+      debug:
+        var: fruits
+
+    - name: Variable as a Dictionary
+      debug:
+        var: fruit_prices
+
+    - name: Register the price of an apple to another variable
+      command: echo "{{ fruit_prices['Apple'] }}"
+      register: apple_price
+
+    - name: Printing the Registered Variable(i.e. Apple price)
+      debug:
+        var: apple_price.stdout
+
+    - name: get the values of fruit from nested variable
+      debug:
+        var: fruit_prices[fruit_basket[2].fruits[1]]
+
+    - name:
+      debug:
+        var: fruit_prices.keys() | list | map('upper') | list
+
