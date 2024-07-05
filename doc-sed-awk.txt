@@ -1,0 +1,12 @@
+
+# This is a SED command for deleting blank lines in a file
+  sed "/^$/d" filename.txt
+
+# This is a SED command for removing all leading and trailing whitespaces including TABS in a file
+  sed "s/^[ /t]*//" filename.txt # LEADING
+  sed "s/[ /t]*$//" filename.txt # TRAILING
+
+# This is a AWK command for pattern matching in a file and printing it
+  awk '/pattern-to-match/ && $2 > 10 {print $1}' Filename.txt
+
+
