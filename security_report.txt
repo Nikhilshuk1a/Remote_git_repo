@@ -1,0 +1,381 @@
+Security Audit Report
+===================================================================================== 
+24-08-2024 22:52:43:  ------------------------------------------------------- Listing all Users -----------------------------------------------------------
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+messagebus
+systemd-timesync
+syslog
+_apt
+tss
+rtkit
+systemd-coredump
+kernoops
+uuidd
+cups-pk-helper
+lightdm
+tcpdump
+speech-dispatcher
+avahi-autoipd
+usbmux
+nm-openvpn
+geoclue
+dnsmasq
+pulse
+_flatpak
+avahi
+saned
+colord
+fwupd-refresh
+hplip
+niks
+vboxadd
+jenkins
+sshd
+userr
+24-08-2024 22:52:43:  ----------------------------------------------------------Listing all groups---------------------------------------------
+root
+daemon
+bin
+sys
+adm
+tty
+disk
+lp
+mail
+news
+uucp
+man
+proxy
+kmem
+dialout
+fax
+voice
+cdrom
+floppy
+tape
+sudo
+audio
+dip
+www-data
+backup
+operator
+list
+irc
+src
+gnats
+shadow
+utmp
+video
+sasl
+plugdev
+staff
+games
+users
+nogroup
+systemd-journal
+systemd-network
+systemd-resolve
+crontab
+messagebus
+systemd-timesync
+input
+sgx
+kvm
+render
+syslog
+tss
+rtkit
+systemd-coredump
+lpadmin
+bluetooth
+ssl-cert
+netdev
+uuidd
+lightdm
+nopasswdlogin
+tcpdump
+_ssh
+plocate
+avahi-autoipd
+nm-openvpn
+geoclue
+pulse
+pulse-access
+scanner
+_flatpak
+avahi
+saned
+colord
+fwupd-refresh
+niks
+sambashare
+vboxsf
+vboxdrmipc
+jenkins
+userr
+24-08-2024 22:52:43:  ----------------------------------------------------- Checking for users with UID 0 -----------------------------------------------------
+root
+24-08-2024 22:52:43:  ------------------------------------------------- Checking for users with empty passwords -----------------------------------------------
+24-08-2024 22:52:43:  ------------------------------------------ Scanning for world-writable files and directories ---------------------------------------------
+root root 4096 /var/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-colord.service-tBtx2x/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-systemd-logind.service-Dz2bg5/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-fwupd.service-JX65XP/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-upower.service-G0eShc/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-systemd-timesyncd.service-SbtKhF/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-systemd-resolved.service-UrXzdA/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-switcheroo-control.service-FHVqKu/tmp
+root root 4096 /var/tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-ModemManager.service-ratfQj/tmp
+root root 4096 /var/lib/BrlAPI
+root root 1274 /etc/ansible/hosts
+niks niks 257 /home/niks/susp.sh
+niks niks 6775 /home/niks/task22.sh
+niks niks 137 /home/niks/config.cfg
+niks niks 4096 /home/niks/.linuxmint
+niks niks 4096 /home/niks/.linuxmint/mintupdate
+niks niks 2212 /home/niks/.linuxmint/mintupdate/updates.json
+niks niks 3216 /home/niks/task11.sh
+niks niks 417 /home/niks/ip.sh
+niks niks 2624 /home/niks/task2.sh
+niks niks 1484 /home/niks/task1.sh
+root root 4096 /tmp
+root root 4096 /tmp/.X11-unix
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-switcheroo-control.service-vWDwrh/tmp
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-upower.service-TvZd3M/tmp
+root root 4096 /tmp/.Test-unix
+root root 4096 /tmp/.XIM-unix
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-systemd-timesyncd.service-4QmpYt/tmp
+root root 4096 /tmp/.ICE-unix
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-systemd-logind.service-0zXazz/tmp
+root root 4096 /tmp/.font-unix
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-ModemManager.service-U7Vd4g/tmp
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-systemd-resolved.service-ouFJ0s/tmp
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-colord.service-OnhWhA/tmp
+niks niks 4096 /tmp/mintUpdate
+niks niks 5852 /tmp/mintUpdate/ycah4vrj
+root root 4096 /tmp/systemd-private-2faa696ce5e3498e86181a6a6281c1d7-fwupd.service-rlmCDc/tmp
+24-08-2024 22:52:45:  ---------------------------------------------------- Checking .ssh directory permissions --------------------------------------------------------
+drwx------ 2 niks niks 4096 Jun  4 01:14 /home/niks/.ssh
+24-08-2024 22:52:45:  --------------------------------------------------- Identifying public and private IPs ----------------------------------------------------------
+192.168.0.4 is a private IP
+24-08-2024 22:52:45:  --------------------------------------------------------------- Checking for SUID/SGID files ------------------------------------------------------
+-rwsr-xr-x 1 root root 18736 Feb 26  2022 /usr/libexec/polkit-agent-helper-1
+-rwxr-sr-x 1 root mail 22856 Jun 19  2023 /usr/libexec/camel-lock-helper-1.2
+-rwsr-xr-x 1 root root 59976 Feb  6  2024 /usr/bin/passwd
+-rwxr-sr-x 1 root _ssh 293304 Jun 26 18:41 /usr/bin/ssh-agent
+-rwsr-xr-x 1 root root 60360 Aug 15  2023 /usr/bin/inetutils-traceroute
+-rwsr-xr-x 1 root root 55680 Apr  9 21:02 /usr/bin/su
+-rwxr-sr-x 1 root plocate 313904 Feb 17  2022 /usr/bin/plocate
+-rwxr-sr-x 1 root shadow 23136 Feb  6  2024 /usr/bin/expiry
+-rwsr-xr-x 1 root root 47488 Apr  9 21:02 /usr/bin/mount
+-rwsr-xr-x 1 root root 35200 Mar 23  2022 /usr/bin/fusermount3
+-rwxr-sr-x 1 root shadow 72184 Feb  6  2024 /usr/bin/chage
+-rwsr-xr-x 1 root root 44808 Feb  6  2024 /usr/bin/chsh
+-rwsr-xr-x 1 root root 72712 Feb  6  2024 /usr/bin/chfn
+-rwsr-xr-x 1 root root 232416 Apr  3  2023 /usr/bin/sudo
+-rwsr-xr-x 1 root root 72072 Feb  6  2024 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 40496 Feb  6  2024 /usr/bin/newgrp
+-rwsr-xr-x 1 root root 35200 Apr  9 21:02 /usr/bin/umount
+-rwxr-sr-x 1 root crontab 39568 Mar 23  2022 /usr/bin/crontab
+-rwsr-xr-x 1 root root 30872 Feb 26  2022 /usr/bin/pkexec
+-rwsr-xr-x 1 root root 22680 Nov 23  2020 /usr/sbin/mount.ecryptfs_private
+-rwxr-sr-x 1 root shadow 22680 Jan 10  2024 /usr/sbin/pam_extrausers_chkpwd
+-rwsr-xr-- 1 root dip 424512 Feb 24  2022 /usr/sbin/pppd
+-rwxr-sr-x 1 root shadow 26776 Jan 10  2024 /usr/sbin/unix_chkpwd
+-rwsr-xr-x 1 root root 52296 Jun  1  2022 /usr/sbin/mount.cifs
+-rwsr-xr-- 1 root messagebus 35112 Oct 25  2022 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-x 1 root root 338536 Jun 26 18:41 /usr/lib/openssh/ssh-keysign
+-rwsr-sr-x 1 root root 14488 Apr 12 19:53 /usr/lib/xorg/Xorg.wrap
+-rwsr-xr-x 1 root root 377352 Jan 15  2024 /opt/VBoxGuestAdditions-7.0.14/bin/VBoxDRMClient
+24-08-2024 22:52:47:  ------------------------------------------------ Listing all running services -------------------------------------------------------------
+  UNIT                        LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service     loaded active running Accounts Service
+  acpid.service               loaded active running ACPI event daemon
+  avahi-daemon.service        loaded active running Avahi mDNS/DNS-SD Stack
+  colord.service              loaded active running Manage, Install and Generate Color Profiles
+  cron.service                loaded active running Regular background program processing daemon
+  cups-browsed.service        loaded active running Make remote CUPS printers available locally
+  cups.service                loaded active running CUPS Scheduler
+  dbus.service                loaded active running D-Bus System Message Bus
+  firewalld.service           loaded active running firewalld - dynamic firewall daemon
+  fwupd.service               loaded active running Firmware update daemon
+  getty@tty1.service          loaded active running Getty on tty1
+  irqbalance.service          loaded active running irqbalance daemon
+  kerneloops.service          loaded active running Tool to automatically collect and submit kernel crash signatures
+  lightdm.service             loaded active running Light Display Manager
+  ModemManager.service        loaded active running Modem Manager
+  networkd-dispatcher.service loaded active running Dispatcher daemon for systemd-networkd
+  NetworkManager.service      loaded active running Network Manager
+  packagekit.service          loaded active running PackageKit Daemon
+  polkit.service              loaded active running Authorization Manager
+  rsyslog.service             loaded active running System Logging Service
+  rtkit-daemon.service        loaded active running RealtimeKit Scheduling Policy Service
+  ssh.service                 loaded active running OpenBSD Secure Shell server
+  switcheroo-control.service  loaded active running Switcheroo Control Proxy service
+  systemd-journald.service    loaded active running Journal Service
+  systemd-logind.service      loaded active running User Login Management
+  systemd-resolved.service    loaded active running Network Name Resolution
+  systemd-timesyncd.service   loaded active running Network Time Synchronization
+  systemd-udevd.service       loaded active running Rule-based Manager for Device Events and Files
+  touchegg.service            loaded active running Touchégg Daemon
+  udisks2.service             loaded active running Disk Manager
+  upower.service              loaded active running Daemon for power management
+  user@1000.service           loaded active running User Manager for UID 1000
+  vboxadd-service.service     loaded active running vboxadd-service.service
+  wpa_supplicant.service      loaded active running WPA supplicant
+  zfs-zed.service             loaded active running ZFS Event Daemon (zed)
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+35 loaded units listed.
+24-08-2024 22:52:47:  --------------------------------------------------- Checking firewall status -------------------------------------------------------
+Status: inactive
+24-08-2024 22:52:47:  ------------------------------------------------------ Checking IP forwarding ----------------------------------------------
+net.ipv4.ip_forward = 0
+net.ipv6.conf.all.forwarding = 0
+24-08-2024 22:52:47:  ------------------------------------------------------- Checking for available security updates -----------------------------------------------------------
+Ign:1 http://packages.linuxmint.com virginia InRelease
+Hit:2 http://packages.linuxmint.com virginia Release
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Ign:5 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Hit:6 https://pkg.jenkins.io/debian-stable binary/ Release
+Hit:8 https://download.docker.com/linux/ubuntu jammy InRelease
+Hit:9 https://ppa.launchpadcontent.net/ansible/ansible/ubuntu jammy InRelease
+Hit:10 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:11 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:12 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists...
+Inst libpython3-stdlib
+Inst python3-minimal
+Inst python3
+Inst libpython3.10
+Inst libpython3.10-minimal
+Inst libpython3.10-stdlib
+Inst python3.10-minimal
+Inst python3.10
+Inst libssl3
+Inst firefox
+Inst jenkins
+Inst ure-java
+Inst ure
+Inst libunoloader-java
+Inst libuno-sal3
+Inst libuno-salhelpergcc3-3
+Inst libuno-cppu3
+Inst libuno-cppuhelpergcc3-3
+Inst uno-libs-private
+Inst libuno-purpenvhelpergcc3-3
+Inst fonts-opensymbol
+Inst libreoffice-math
+Inst libreoffice-writer
+Inst libreoffice-impress
+Inst libreoffice-help-de
+Inst libreoffice-help-zh-tw
+Inst libreoffice-help-zh-cn
+Inst libreoffice-help-ru
+Inst libreoffice-help-pt-br
+Inst libreoffice-help-pt
+Inst libreoffice-help-it
+Inst libreoffice-help-fr
+Inst libreoffice-help-es
+Inst libreoffice-help-en-us
+Inst libreoffice-help-en-gb
+Inst libreoffice-help-common
+Inst libreoffice-calc
+Inst libreoffice-common
+Inst libreoffice-base-drivers
+Inst libreoffice-base
+Inst libreoffice-gnome
+Inst libreoffice-gtk3
+Inst python3-uno
+Inst libreoffice-base-core
+Inst libreoffice-draw
+Inst libreoffice-core
+Inst libreoffice-l10n-de
+Inst libreoffice-l10n-zh-tw
+Inst libreoffice-l10n-zh-cn
+Inst libreoffice-l10n-ru
+Inst libreoffice-l10n-pt-br
+Inst libreoffice-l10n-pt
+Inst libreoffice-l10n-it
+Inst libreoffice-l10n-fr
+Inst libreoffice-l10n-es
+Inst libreoffice-l10n-en-gb
+Inst libreoffice-style-colibre
+Inst libk5crypto3
+Inst libkrb5support0
+Inst libkrb5-3
+Inst libgssapi-krb5-2
+Inst libldap-2.5-0
+Inst libcurl3-gnutls
+Inst libpoppler-cpp0v5
+Inst poppler-utils
+Inst libpoppler-glib8
+Inst libpoppler118
+Inst openssl
+Inst bind9-dnsutils
+Inst bind9-host
+Inst bind9-libs
+Inst busybox-static
+Inst ansible-core
+Inst ansible
+Inst busybox-initramfs
+Inst curl
+Inst libcurl4
+Inst exfatprogs
+Inst firefox-locale-en
+Inst krb5-locales
+Inst libreoffice-java-common
+Inst liblibreoffice-java
+Inst liborc-0.4-0
+Inst libreoffice-l10n-en-za
+Inst openjdk-17-jre
+Inst openjdk-17-jre-headless
+Inst openjdk-11-jre
+Inst openjdk-11-jre-headless
+Inst libreoffice-sdbc-hsqldb
+Inst linux-libc-dev
+Inst python3-problem-report
+Inst python3-apport
+Inst ubuntu-system-adjustments
+Inst wpasupplicant
+Inst intel-microcode
+24-08-2024 22:53:00:  --------------------------------------------- Checking logs for suspicious activity -------------------------------------------------------------
+No Suspicious Activity Found in the logs
+24-08-2024 22:53:00:  --------------------------------------------- Checking for any open ports and their services --------------------------------------
+Not shown: 998 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+631/tcp open  ipp
+24-08-2024 22:53:01:  ------------------------------------------------- Checking for unauthorized services on open ports ---------------------------------------------------- 
+Unauthorized port open: 48525
+Unauthorized port open: 53
+Unauthorized port open: 5353
+Unauthorized port open: 631
+Unauthorized port open: Local
+24-08-2024 22:53:01:  ---------------------------------------------------------- Checking for critical services -----------------------------------------------------------
+Critical service sshd is running
+Critical service jenkins is not running
+Critical service dbus is running
+Critical service firewalld is running
+Critical service polkit is running
