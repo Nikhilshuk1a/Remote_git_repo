@@ -68,17 +68,46 @@ show_cpu_breakdown() {
     echo "  Idle: $(top -bn1 | grep 'Cpu(s)' | awk '{print $8}' | sed 's/\,//')%"
 }
 
+# Function to display the number of concurrent connections
+show_connections() {
+    echo "Number of concurrent connections:"
+    # Using `ss` to show the number of connections. Adjust as needed.
+    ss -s | grep 'TCP:' | awk '{print $4}' | sed 's/[^0-9]*//g'
+}
+
+# Function to display packet drops
+show_packet_drops() {
+    echo "Packet drops:"
+    # Using `ifstat` to show packet drops. Adjust as needed.
+    ifstat -i $(ip link show | grep 'state UP' | awk '{print $2}' | sed 's/://') 1 1 | tail -n +3 | awk '{print "In: " $1 " Dropped, Out: " $2 " Dropped"}'
+}
+
+# Function to display the number of MB in and out
+show_traffic() {
+    echo "Network traffic in MB:"
+    # Using `ifstat` to show network traffic
+    ifstat -i $(ip link show | grep 'state UP' | awk '{print $2}' | sed 's/://') 1 1 | tail -n +3 | awk '{print "In: " $1 " KB, Out: " $2 " KB"}' | awk '{print "In: " $1/1024 " MB, Out: " $2/1024 " MB"}'
+}
+
+
 # Function to clear the screen and display the dashboard
 refresh_dashboard() {
     clear
     echo "System Dashboard - $(date)"
-    echo "-------------------------------"
+    echo "----------------------------------------------------------------------------------------------------------------------"
     show_top_apps
     show_active_processes
     show_memory
     show_services_status
     show_disk_usage
     show_cpu_breakdown
+    show_connections
+    show_packet_drops
+    show_traffic
+    show_connections
+    show_traffic
+    show_packet_drops
+
 }
 
 # Main logic to handle command line switches and refresh interval
@@ -109,8 +138,17 @@ else
 	--memory)
 	    show_memory
 	    ;;
+        --connections)
+	    show_connections
+	    ;;
+        --packet-drops)
+	    show_packet_drops
+	    ;;
+	--traffic)
+	    show_traffic
+	    ;;
         *)
-            echo "Usage: $0 [--top | --processes | --services | --disk | --cpu | --memory]"
+            echo "Usage: $0 [--top | --processes | --services | --disk | --cpu | --memory | --connections | --packet-drops | --traffic]"
             ;;
     esac
 fi
